@@ -20,7 +20,7 @@ fcrackzip -b -c <jenis_karakter> -l <panjang_min>-<panjang_maks> -u -v <file_zip
 - -b: Menggunakan Brute Force Attack.
 - -c: Menentukan jenis karakter yang digunakan.
 - -l: Menentukan panjang minimal dan maksimal kata sandi.
-- -u: 
+- -u: Memperbarui status file zip dengan informasi dekripsi yang ditemukan.
 - -v: Menampilkan output secara verbose.
 
 jenis karakter yang tersedia:
