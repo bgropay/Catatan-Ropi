@@ -14,7 +14,7 @@ $ sudo apt-get install fcrackzip
 ### 1. Teknik Brute Force Attack
 
 ```
-fcrackzip -b -c <jenis_karakter> -l <panjang_min>-<panjang_maks> -u -v <file_zip>
+fcrackzip -b -c <jenis_karakter> -l <panjang_min>-<panjang_maks> -v -u <file_zip>
 ```
 
 - -b: Menggunakan Brute Force Attack.
@@ -33,6 +33,24 @@ jenis karakter yang tersedia:
 Contoh:
 
 ```
-fcrackzip -b -c aA1! -l 4-8 -u -v test.zip
+fcrackzip -b -c aA1! -l 4-8 -v -u file.zip
 ```
-  
+
+### 2. Teknik Dictionary Attack
+
+```
+fcrackzip -u -v -D -p <wordlist> <file_zip>
+```
+
+keterangan:
+
+- -u: Memperbarui status file zip dengan informasi dekripsi yang ditemukan.
+- -v: Menampilkan output secara verbose.
+- -D: Menggunakan Dictionary Attack
+- -p: Menentukan path ke file wordlist yang berisi daftar kata sandi yang akan dicoba.
+
+Contoh:
+
+```
+fcrackzip -v -u -D -p wordlist.txt file.zip
+```
