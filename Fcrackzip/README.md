@@ -14,12 +14,13 @@ $ sudo apt-get install fcrackzip
 ### 1. Teknik Brute Force Attack
 
 ```
-fcrackzip -b -c <jenis_karakter> -l <panjang_min>-<panjang_maks> -v <file_zip>
+fcrackzip -b -c <jenis_karakter> -l <panjang_min>-<panjang_maks> -u -v <file_zip>
 ```
 
 - -b: Menggunakan Brute Force Attack.
 - -c: Menentukan jenis karakter yang digunakan.
 - -l: Menentukan panjang minimal dan maksimal kata sandi.
+- -u: 
 - -v: Menampilkan output secara verbose.
 
 jenis karakter yang tersedia:
@@ -32,6 +33,6 @@ jenis karakter yang tersedia:
 Contoh:
 
 ```
-fcrackzip -b -c aA1! -l 4-8 -v test.zip
+fcrackzip -b -c aA1! -l 4-8 -u -v test.zip
 ```
   
