@@ -1,10 +1,10 @@
 ## Daftar Isi
 
-- [Fcrackzip]()
-- [Instalasi]()
-- [Penggunaan]()
-  - [Teknik Brute Force Attack]()
-  - [Teknik Dictionary Attack]()
+- [Fcrackzip](https://github.com/bgropay/Catatan-Ropi/tree/main/Fcrackzip#fcrackzip)
+- [Instalasi](https://github.com/bgropay/Catatan-Ropi/tree/main/Fcrackzip#instalasi)
+- [Penggunaan](https://github.com/bgropay/Catatan-Ropi/tree/main/Fcrackzip#penggunaan)
+  - [Teknik Brute Force Attack](https://github.com/bgropay/Catatan-Ropi/tree/main/Fcrackzip#1-teknik-brute-force-attack)
+  - [Teknik Dictionary Attack](https://github.com/bgropay/Catatan-Ropi/tree/main/Fcrackzip#2-teknik-dictionary-attack)
 
 
 # Fcrackzip
