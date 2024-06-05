@@ -18,7 +18,7 @@
 # sering digunakan untuk kompresi dan enkripsi file.
 #----------------------------------------------------------
 # ┌
-# ︱
+# │
 # ├[1]
 # ├[2] 
 # ┘┐
