@@ -18,7 +18,9 @@
 # sering digunakan untuk kompresi dan enkripsi file.
 #----------------------------------------------------------
 # ┌
-# └
+# ︱
+# ├[1]
+# ├[2] 
 
 function banner(){
         echo ""
