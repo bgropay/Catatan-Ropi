@@ -252,11 +252,21 @@ function cfz(){
         # Teknik Brute Force Attack
         if [[ "${pts}" == "1" ]]; then
                 echo ""
-                fcrackzip -v -u -b -c "${k}" -l "${pmin}"-"${pmaks}" "${fz}"
+                kata_sandi_b=$(fcrackzip -v -u -b -c "${k}" -l "${pmin}"-"${pmaks}" "${fz}")
+                exit 0
+                if [[ -z "${kata_sandi_b}" ]]; then
+                        echo "PASSWORD NOT FOUND!!!!"
+                        exit 1
+                fi
         # Teknik Dictionary Attack
         elif [[ "${pts}" == "2" ]]; then
                 echo ""
-                fcrackzip -v -u -D -p "${fw}" "${fz}"
+                kata_sandi_d=$(kata_sandifcrackzip -v -u -D -p "${fw}" "${fz}")
+                exit 0
+                if [[ -z "${kata_sandi_d}" ]]; then
+                        echo "PASSWORD NOT FOUND!!!!"
+                        exit 1
+                fi
         fi
 }
 
