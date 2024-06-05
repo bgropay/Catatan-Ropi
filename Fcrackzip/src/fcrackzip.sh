@@ -210,6 +210,9 @@ function mjk(){
                                 k="aA1!"
                                 break
                                 ;;
+                        *)
+                                echo "Error: Jenis karakter ${pjk} tidak tersedia."
+                                ;;
                 esac
         done
 }
