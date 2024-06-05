@@ -21,6 +21,7 @@
 # ︱
 # ├[1]
 # ├[2] 
+# ┘┐
 
 function banner(){
         echo ""
