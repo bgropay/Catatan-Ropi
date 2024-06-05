@@ -18,6 +18,18 @@
 # sering digunakan untuk kompresi dan enkripsi file.
 #----------------------------------------------------------
 
+function banner(){
+        echo ""
+        echo "[----------------------------------------------------------]"
+        echo "[--]----------------------------------------------------[--]"
+        echo "[--] Fcrackzip - Pemecah kata sandi file ZIP yang cepat [--]"
+        echo "[--]            Dibuat oleh: Rofi (Fixploit )           [--]"
+        echo "[--]  Ikuti Saya di Github: https://github.com/bgropay  [--]"
+        echo "[--]----------------------------------------------------[--]"
+        echo "[----------------------------------------------------------]"
+        echo ""
+}
+
 # Fungsi untuk memasukkan file ZIP
 function mfz(){
         while true; do
@@ -25,6 +37,7 @@ function mfz(){
                 if [[ ! -z "${fz}" ]]; then
                         if [[ -f "${fz}" ]]; then
                                 if [[ "${fz##*.}" == "zip" ]]; then
+                                        echo "[+] File ZIP '${fz}' ditemukan."
                                         break
                                 else
                                         echo "Error: File ${fz} bukan file ZIP."
@@ -66,11 +79,13 @@ function mjt(){
                 case "${pts}" in
                         1)
                                 # Brute Force Attack 
+                                echo "[+] Teknik serangan yang dipilih '${jt[0]}'"
                                 bfa
                                 break
                                 ;;
                         2)
                                 # Dictionary Attack 
+                                echo "[+] Teknik serangan yang dipilih '${jt[1]}'"
                                 da
                                 break
                                 ;;
@@ -87,6 +102,7 @@ function mpmin(){
                 read -p "Masukkan panjang minimal kata sandi: " pmin
                 if [[ ! -z "${pmin}" ]]; then
                         if [[ "${pmin}" =~ ^[0-9]+$ ]]; then
+                                echo "[+] Panjang minimal kata sandi yang digunakan '${pmin}'"
                                 break
                         else
                                 echo "Error: Masukkan tidak valid. Harap masukkan angka."
@@ -104,6 +120,7 @@ function mpmaks(){
                 if [[ ! -z "${pmaks}" ]]; then
                         # Jika input yang dimasukkan berupa angka
                         if [[ "${pmaks}" =~ ^[0-9]+$ ]]; then
+                                echo "[+] Panjang maksimal kata sandi yang digunakan '${pmin}'"
                                 break
                         else
                                 echo "Error: Masukkan tidak valid. Harap masukkan angka."
@@ -153,62 +170,77 @@ function mjk(){
                 read -p "Pilih jenis karakter: " pjk
                 case "${pjk}" in
                         1)
+                                echo "[+] Jenis karakter yang dipilih '${djk[0]}'"
                                 k="a"
                                 break
                                 ;;
                         2)
+                                echo "[+] Jenis karakter yang dipilih '${djk[1]}'"
                                 k="A"
                                 break
                                 ;;
                         3)
+                                echo "[+] Jenis karakter yang dipilih '${djk[2]}'"
                                 k="1"
                                 break
                                 ;;
                         4)
+                                echo "[+] Jenis karakter yang dipilih '${djk[3]}'"
                                 k="!"
                                 break
                                 ;;
                         5)
+                                echo "[+] Jenis karakter yang dipilih '${djk[4]}'"
                                 k="aA"
                                 break
                                 ;;
                         6)
+                                echo "[+] Jenis karakter yang dipilih '${djk[5]}'"
                                 k="a1"
                                 break
                                 ;;
                         7)
+                                echo "[+] Jenis karakter yang dipilih '${djk[6]}'"
                                 k="a!"
                                 break
                                 ;;
                         8)
+                                echo "[+] Jenis karakter yang dipilih '${djk[7]}'"
                                 k="A1"
                                 break
                                 ;;
                         9)
+                                echo "[+] Jenis karakter yang dipilih '${djk[8]}'"
                                 k="A!"
                                 break
                                 ;;
                         10)
+                                echo "[+] Jenis karakter yang dipilih '${djk[9]}'"
                                 k="1!"
                                 break
                                 ;;
                         11)
+                                echo "[+] Jenis karakter yang dipilih '${djk[10]}'"
                                 k="aA1"
                                 break
                                 ;;
                         12)
+                                echo "[+] Jenis karakter yang dipilih '${djk[11]}'"
                                 k="aA!"
                                 break
                                 ;;
                         13)
+                                echo "[+] Jenis karakter yang dipilih '${djk[12]}'"
                                 k="a1!"
                                 break
                                 ;;
                         14)
+                                echo "[+] Jenis karakter yang dipilih '${djk[13]}'"
                                 k="A1!"
                                 break
                                 ;;
                         15)
+                                echo "[+] Jenis karakter yang dipilih '${djk[14]}'"
                                 k="aA1!"
                                 break
                                 ;;
@@ -225,6 +257,7 @@ function mfw(){
                 read -p "Masukkan nama file wordlist: " fw
                 if [[ ! -z "${fw}" ]]; then
                         if [[ -f "${fw}" ]]; then
+                                echo "[+] File wordlist '${fw}' ditemukan."
                                 break
                         else
                                 echo "Error: File wordlist ${fw} tidak ditemukan."
@@ -264,6 +297,7 @@ function cfz(){
 
 # Fungsi utama Fcrackzip
 function main(){
+        banner
         mfz # Memanggil fungsi memasukkan file zip
         mjt # Memanggi fungsi memilih jenis teknik
         cfz # Memanggil fungsi meng-crack kata sandi file ZIP menggunakan Fcrackzip
