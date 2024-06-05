@@ -262,10 +262,12 @@ function cfz(){
         elif [[ "${pts}" == "2" ]]; then
                 echo ""
                 kata_sandi_d=$(kata_sandifcrackzip -v -u -D -p "${fw}" "${fz}")
-                exit 0
                 if [[ -z "${kata_sandi_d}" ]]; then
                         echo "PASSWORD NOT FOUND!!!!"
                         exit 1
+                else
+                        echo "${kata_sandi_d}"
+                        exit 0
                 fi
         fi
 }
