@@ -253,9 +253,11 @@ function cfz(){
         if [[ "${pts}" == "1" ]]; then
                 echo ""
                 kata_sandi_b=$(fcrackzip -v -u -b -c "${k}" -l "${pmin}"-"${pmaks}" "${fz}")
-                exit 0
                 if [[ -z "${kata_sandi_b}" ]]; then
                         echo "PASSWORD NOT FOUND!!!!"
+                        exit 1
+                else
+                        echo "${kata_sandi_b}"
                         exit 1
                 fi
         # Teknik Dictionary Attack
