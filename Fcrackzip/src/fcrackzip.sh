@@ -17,6 +17,8 @@
 # cepat dan efisien untuk menebak kata sandi file ZIP, yang
 # sering digunakan untuk kompresi dan enkripsi file.
 #----------------------------------------------------------
+# ┌
+# └
 
 function banner(){
         echo ""
