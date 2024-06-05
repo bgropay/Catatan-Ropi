@@ -65,10 +65,12 @@ function mjt(){
                 read -p "Pilih teknik serangan: " pts
                 case "${pts}" in
                         1)
+                                # Brute Force Attack 
                                 bfa
                                 break
                                 ;;
                         2)
+                                # Dictionary Attack 
                                 da
                                 break
                                 ;;
